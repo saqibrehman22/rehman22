@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="saqo.png">
+    <style>
+     
+     *{
+        margin: 0;
+        padding: 0 ;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        
+     }
+     header{
+       
+        height: 100vh;
+        background-image: url(saqo.png);
+        background-size: 50% 90%;
+        background-repeat: no-repeat;
+        background-position: bottom right; 
+     }
+     nav{
+        width: 100%;
+        height: 70px;
+        background: white;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+         box-shadow: 2px 0px 5px grey;
+
+     }
+     nav a:hover{
+        background-color: rgb(255, 149, 0);
+        border-radius: 10px;
+     }
+
+     .Logo{
+        font-weight: bold;
+        font-size: 2em;
+        letter-spacing: 2px;
+        margin-left: 100px;
+     }
+     .Logo span{
+        color: brown;
+     }
+    .Menu a{
+        text-decoration: none;
+        color: black;
+        padding: 10px 20px;
+    }
+    .Menu a:last-child {
+        background: brown;
+        color: white;
+        border-radius: 8px;
+    }
+    .h-text{
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        padding: 15px;
+
+    }
+    .h-text p{
+        color: #262626;
+        letter-spacing: 3px;
+        font-weight: bold;
+    }
+    .h-text h1{
+        font-size: 4em;
+        line-height: 1.5em;
+    }
+    .h-text h1 span{
+        color: brown;
+    } 
+    .h-text h2{
+
+       font-size: 4em; 
+       margin-bottom: 0.5em;
+    }
+    #order{
+        text-decoration: none;
+        color: white;
+        background-color: brown;
+        border-radius: 15px;
+        padding: 10px 20px;
+
+    }
+    #dis{
+        text-decoration: none;
+        color: white;
+        background-color: #262626;
+        border-radius: 15px;
+        padding: 10px 20px;
+    }
+    .Menu2{
+        padding: 0px 10px 30px 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax,(350px,1fr));
+        grid-gap: 20px 40px;
+    }
+    .Heading{
+        background: brown;
+        color: #ffffff;
+        margin-bottom: 20px;
+        padding: 20px 0 ;
+        grid-column: 1/-1;
+        text-align: center;
+
+    }
+.Heading H1{
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.Heading h3{
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.food-items{
+    width: 300px;
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px ;
+    box-shadow: 0 0 15px black;
+    transition: .2s ease-in-out;
+    text-align: center;
+    display: inline-block;
+    
+}
+.food-items img{
+    position: relative;
+    height: 280px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+
+}
+h1{
+    grid-column: 1/-1;
+    text-align: center;
+}
+.details{
+    padding: 20px 10px ;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+h5{
+    font-weight: 600px;
+    font-size: 18px;
+}
+p{
+    color: #262626;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-items: stretch;
+}
+button{
+    width: 100px;
+    height: 50px;
+    background:  brown;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 260px;
+    cursor: pointer;
+}
+.container{
+     max-width: 1170px;
+     margin: auto;
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+    
+}
+.footer{
+    background-color: #24242b;
+    padding: 70px 0;
+    
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    font-weight: 500;
+    position: relative;
+}
+
+    .footer-col h4::before{
+    content: '' ;
+    position:absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box ;
+    width: 50px;
+    
+}
+.footer-col ul li:nth-last-child()
+{
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+.a1{
+    background-color: #ffffff;
+    background-position: 100px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: ;
+    
+
+}
+a i{
+    transition: all 0.3s linear;
+}
+a i:hover{
+    transform: scale(0.5);
+}
+.fa-facebook{
+    color: #4c46b9;
+}
+.fa-instagram{
+    color: rgb(153, 17, 51);
+}
+.fa-youtube{
+    color: red;
+
+}
+.fa-gituhb{
+    color:white;
+}
+h4{
+
+}
+.Follow{
+    color: #ffffff;
+}
+.copyall{
+    text-align: center;
+}
+
+
+
+    </style>
+</head>
+    <header>
+<nav>
+    <div class="Logo"> Peshawar <span>Pizza</span> </div>
+    <div class="Menu">
+
+    <a href="index.html">Contact</a>
+    <a href="#">Menu</a>
+    <a href="#">Foods</a>
+    <a href="#">Offer's</a>
+    <a href="#">Your Order</a>
+    <a href="#">Delivery</a>
+    <a href="#">Cart</a>
+
+    </div>
+
+   
+</nav>
+<div class="h-text">
+    <p>Free Home Delivery</p>
+<h1>Quality F<span>oo</span>ds</h1>
+<h2>Pizza Of The Week</h2>
+<a href="#" id="order">Order Now</a>
+<a href="#" id="dis">25% off Discount</a>
+</div>
+</header>
+
+<div class="Menu2">
+    <div class="Heading">
+        <H1> RESTAURANT FOODS</H1>
+        <h3>&mdash;MENU&mdash;</h3>
+</div>
+</div>
+<div class="food-items">
+    <img src="/Resturent Web/saqo.png">
+    <div class="details">
+    <div class="details-sub">
+        <h5>Peshawari Pizza</h5>
+        <h5 class="price">1200PKR</h5>  
+    </div>
+    <p>Peshawari Pizza Available large And
+        Meidum size, and the corresponding price for each size.</p>
+        <button>Order</button>
+        </div>
+</div>
+<div class="food-items">
+    <img src="https://freepngimg.com/save/6489-pizza-png-image/673x650">
+    <div class="details">
+    <div class="details-sub">
+        <h5>Peshawari Pizza</h5>
+        <h5 class="price">1200PKR</h5>  
+    </div>
+    <p>Peshawari Pizza Available large And
+        Meidum size, and the corresponding price for each size.</p>
+        <button>Order</button>
+    </div>
+</div>
+<div class="food-items">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbJwQioKl_H8Q86gf8b7cFJCDQgmhA7kzESUzJ4P2wQvpPRGMVq6iBM6urZJ3qUCWtNY&usqp=CAU">
+    <div class="details">
+    <div class="details-sub">
+        <h5>Peshawari Pizza</h5>
+        <h5 class="price">1200PKR</h5>  
+    </div>
+    <p>Peshawari Pizza Available large And
+        Meidum size, and the corresponding price for each size.</p>
+        <button>Order</button>
+        </div>
+</div>  
+    
+<div class="food-items">
+    <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2018/05/paneer-pizza-recipe-1.jpg">
+    <div class="details">
+    <div class="details-sub">
+        <h5>Peshawari Pizza</h5>
+        <h5 class="price">1200PKR</h5>  
+    </div>
+    <p>Peshawari Pizza Available large And
+        Meidum size, and the corresponding price for each size.</p>
+        <button>Order</button>
+        </div>
+</div>  
+<div class="food-items">
+    <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/02/vegetarian-pizza.jpg">
+    <div class="details">
+    <div class="details-sub">
+        <h5>Peshawari Pizza</h5>
+        <h5 class="price">1200PKR</h5>  
+    </div>
+    <p>Peshawari Pizza Available large And
+        Meidum size, and the corresponding price for each size.</p>
+        <button>Order</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <hr>
+<br>
+<br>
+ 
+
+<footer>
+    <div class="footer">
+     <div class="container">
+        <div class="row">
+         <div class="footer-col">
+            <h4>Restaurant</h4>
+            <ul>
+                <li><a href="#">About Us</a</li>
+                <li><a href="#">Our Services</a</li>
+                <li><a href="#">Privacy Policy</a</li>
+                <li><a href="#"> Contact Us</a> </li>
+            </ul>
+         </diV>
+         <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Order Satus</a></li>
+                <li><a href="#">Payment Option</a></li>
+            </ul>
+         </diV>
+         <div class="footer-col">
+            <h4>Online Order</h4>
+            <ul>
+                <li><a href="#">Peshawar Pizza</a></li>
+                <li><a href="#">PIZZA</a></li>
+                <li><a href="#">Pizza</a></li>
+                <li><a href="#">Pizza</a></li>
+            </ul>
+         </diV>
+         <h4 class="Follow">Follow Us</h4>
+         <br> 
+         <br> 
+         <br> 
+         <br> 
+         <div class="centerdiv">
+             <a class="a1" href="https://www.facebook.com/saqibrehman22?mibextid=ZbWKwL" target="_blank">
+             <i class="fa-brands fa-10px fa-facebook fa-"></i>
+         </a>
+         <a class="a1" href="https://instagram.com/khaneditx9980?igshid=MzNlNGNkZWQ4Mg==" target="_blank">
+             <i class="fa-brands fa-10px fa-instagram"></i>
+         </a>
+         <a class="a1" href="https://youtube.com/@khaneditx255" target="_blank">
+             <i class="fa-brands 2px fa-youtube"></i>
+         </a>
+         <a class="a1" href="https://github.com/saqibrehman22" target="_blank">
+             <i class="fa-brands 2px fa-tiktok"></i>
+         </a>
+ 
+         </div>
+
+        </div>
+     </div>
+
+    </div>
+    <p class="copyall">All Copyright &copy; Reversed</p>
+</footer>
+</body>
+</html>
