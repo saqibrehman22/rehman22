@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(rgb(105, 82, 15),rgb(50, 40, 72));
+    background-size: cover;
+    color:white;
+
+}
+
+nav{
+    background-color:rgb(215, 109, 109) ;
+    margin-left:10%;
+    width:80%;
+    height: 55px;
+    border-radius:1px ;
+    padding-left:10px;
+    box-shadow: 3px 6px 5px 3px rgb(0, 0, 0);
+}
+.header h1{
+    color:black;
+    font-family: fantasy;
+    display: inline;
+    margin: 10px;
+}
+.header a{
+    text-decoration: none;
+    color:white;
+    padding: 15px;
+}
+.right{
+    display: inline;
+    margin-top:14px;
+    float:right;
+}
+#contact{
+    background-color: rgb(63, 65, 51);
+    color:white;
+    border-radius: 20px;
+}
+a:hover{
+    background-color: purple;
+    color:white;
+    border-radius: 20px;
+}
+#contact:hover{
+    color:rgb(255, 132, 0);
+    background-color: black;
+}
+.About{
+    margin-top:150px;
+    margin-left:130px;
+    display: inline-block;
+}
+.About h6{
+    font-size: small;
+    margin-bottom:0px;
+}
+.About h1{
+    color: yellowgreen;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+#developer{
+    background-color: rgb(220, 209, 2);
+    color:black;
+   font-size: 10px;
+   font-weight: 540;
+   border: none;
+  padding: 3px;
+  border-radius:3px;
+  margin-top:-20px;
+}
+.About p{
+    font-size:12px;
+    margin-top:8px;
+}
+.About a{
+    color:black;
+    text-decoration: none;
+}
+.picture{
+    display: inline-block;
+    width:450px;
+    height:400px ;
+    float: right;
+    margin-top:100px;
+}
+.picture img{
+    border: 1px solid #b2abab94;
+ border-radius: 50%;
+   width: 300px;
+   height: 300px;
+   margin-left:50px;
+   border:solid;
+   border-width:8px;
+  border-color: whitesmoke;
+ 
+}
+#npicture{
+    border:none;
+    width:20px;
+    height:20px;
+    margin-left:130px;
+    display: inline-block;
+}
+.picture p{
+    display: inline;
+    color:black;
+    font-weight: bold;
+}
+.aboutme{
+    margin: 200px;
+    padding: 100px;;
+    background-color: rgb(31, 29, 28);
+    text-align: center;
+}
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    margin: 80px;
+
+
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    margin: 20px 0;
+    
+}
+.skill-bar{
+    height: 14px;
+    background: #282828;
+    border-radius: 3px;
+}
+.skill-per{
+    height: 14px ;
+    background: red;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #2a1fc4;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translate(50%);
+}
+.skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #f0d8d8;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+   
+}
+@keyframes fillBars{
+ from{
+    width: 0;
+ }
+ to{
+    width: 100%;
+ }
+}
+h2{
+    margin: 100px;
+}
+.khan {
+    width: 300px;
+    height: ;
+    background-color: white;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    margin-bottom: 25px;
+    display: inline-block;
+    color: #000000;
+    margin: 50px ;
+    text-align: center;
+  }
+  
+  .container {
+    text-align: center;
+   
+    display: inline-block;
+    
+  }
+form{
+    margin: 35px;
+    width: 500px;
+    height: 300px;
+
+    border-radius: 10px;
+}
+.input-field{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #777;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+}
+.contactbox
+{
+    background-color: rgb(89, 155, 155);
+    background-size:cover;
+    width: 500px;
+    height: 500px;
+    margin-left: 300px;
+    border-radius: 10%;
+}
+h2{
+    text-align: center;
+    color: #ffb700;
+}
+button{
+    width: 100px;
+    align-items: center;
+    height: 50px;
+    border-radius: 20%;
+    cursor: pointer;
+    background: #ffb700;
+}
